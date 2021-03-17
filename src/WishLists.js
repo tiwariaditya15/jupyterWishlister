@@ -50,7 +50,7 @@ function WishListing({ wishList, handleDeleteWish }) {
         display: "flex",
         justifyContent: "space-between",
         backgroundColor: "#DBEAFE",
-        maxWidth: "55%",
+        maxWidth: "65%",
         margin: "1px auto",
         padding: "1.5rem",
         borderRadius: "0.3rem",
