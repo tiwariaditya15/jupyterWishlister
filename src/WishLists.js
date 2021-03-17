@@ -69,12 +69,8 @@ function WishListing({ wishList, handleDeleteWish }) {
 export default function Wishlists({}) {
   const [error, setError] = useState({ notext: false, overflow: false });
   const [wishText, setWishText] = useState("");
-  const [wishList, setWishList, getItemsFromLocalStorage] = useLocalStoarge();
+  const [wishList, setWishList] = useLocalStoarge();
 
-  useEffect(() => {
-    const wishes = getItemsFromLocalStorage();
-    if (wishes) setWishList([...wishes]);
-  }, []);
   const handleDeleteWish = (id) => {
     setWishList(wishList.filter((wish) => wish.id !== id));
   };
