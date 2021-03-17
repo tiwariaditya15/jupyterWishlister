@@ -6,7 +6,9 @@ function getItemsFromLocalStorage() {
 export default function useLocalStoarge() {
   const [wishList, setWishList] = useState([]);
 
-  localStorage.setItem("wishList", JSON.stringify(wishList));
+  if (wishList.length) {
+    localStorage.setItem("wishList", JSON.stringify(wishList));
+  }
 
   return [wishList, setWishList, getItemsFromLocalStorage];
 }
