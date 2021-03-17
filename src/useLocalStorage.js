@@ -16,5 +16,5 @@ export default function useLocalStoarge() {
     localStorage.setItem("wishList", JSON.stringify(wishList));
   }, [wishList]);
 
-  return [wishList, setWishList, getItemsFromLocalStorage];
+  return [wishList, setWishList];
 }
